@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    
+}
+
+::selection {
+    background-color: red;
+}
+::-webkit-scrollbar {
+    width: 10px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background-color: red;
+}
+
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/patung-knalpot.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+   
+}
+
+nav {
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+   width: 100%;
+   transition: all 0.5s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.sticky a {
+    color: black;
+}
+
+.sticky .nav-links ul li a{
+    color: black;
+}
+
+
+
+  .logo {
+    font-size: 2rem;
+    margin-top: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.logo span {
+    color: red;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links ul li {
+    list-style-type: none;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: red;
+    transition: all 0.5s;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+nav #show-menu , nav #hide-Menu{
+    display: none;
+}
+
+.text-box {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 38%;
+    left: 5%;
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 3.5rem;
+}
+
+.text-box p {
+    font-size: 1.3rem;
+}
+
+.quote {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.text-box a {
+    margin-top: 15px;
+    display: inline-block;
+    background-color:red ;
+    padding: 1rem 0.8rem;
+    color: white;
+    text-decoration: none;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.wisata h1 , .tentang h1{
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 40px;
+    font-style: italic;
+}
+
+.kolom, .kolom-tentang{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.wisata .kolom{
+    flex: 1 1 calc(50% - 10px);
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.wisata-judul:hover{
+    background: rgba(226, 0, 0, 0.7);
+}
+
+
+.wisata .kolom img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.wisata .kolom img:hover {
+    transform: scale(1.01);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+
+
+.tentang-img img{
+    width: 400px;
+    border-radius: 10px;
+    height: 300px;
+}
+
+.tentang-img img:hover{
+    transform: scale(1.01);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+
+
+
+.tentang-description {
+    font-size: 1.4rem;
+    max-width: 600px;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+aside {
+    display: flex;
+    padding: 14px 0px;
+    gap: 20px;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+
+
+
+
+footer {
+    padding: 10px;
+    text-align: center;
+    margin-top: 100px;
+    font-style: italic;
+    font-weight: 800;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    
+
+    nav {
+        padding: 5%;
+        overflow-y: hidden;
+    }
+
+     .logo {
+        font-size: 1rem;
+        
+    }
+
+    .logo span  {
+        display: block;
+    }
+
+
+
+    nav .nav-links  {
+        background-color: red;
+        min-height: auto;
+        height: auto;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        text-align: left;
+        right: -210px;
+        transition: 0.5s;
+        z-index: 9999;        
+    }
+
+    .text-box .btn {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .sticky {
+        height: 100px;
+        z-index: 9999;
+    }
+
+    .sticky .nav-links ul li a {
+        color: white;
+    }
+
+    .sticky #show-menu {
+        color: black;
+    }
+
+    nav .nav-links ul {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    nav #show-menu,nav #hide-Menu {
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .text-box h1 {
+        font-size: 1.7rem;
+    }
+
+    .text-box p ,.quote{
+        font-size: 0.8rem;
+    }
+
+    .wisata h1 {
+        font-size: 1.3rem;
+    }
+  
+    .wisata .kolom .wisata-kolom img,.tentang-img img{
+        margin: 0 auto;
+        width: 380px;
+    }
+
+    .kolom-tentang {
+        gap: 10px;
+    }
+    
+
+    .tentang-description {
+        font-size: 1.2rem;
+        max-width: 380px;
+        padding: 1rem 1.4rem;
+    }
+    .tentang-description aside,i{
+        font-size: 0.79rem;    
+        font-weight: 800;   
+    }
+}
