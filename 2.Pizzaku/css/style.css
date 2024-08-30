@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: tomato;
+}
+
+::selection {
+    background-color: tomato;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(4,7,30,0.7), rgba(4,7,30,0.7)),url(../images/banner-pizza.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+
+nav {
+    display: flex;
+    padding: 1% 5%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.active {
+    background-color: tomato;
+    padding: 1% 5%;
+    box-shadow: 0 4px 6px 0 rgba(4,7,30,0.7);
+}
+
+.active .navigasi-link ul li a:hover {
+    color: black;
+}
+
+.logo {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navigasi-link ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+
+}
+
+.navigasi-link ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+
+ .navigasi-link ul li a:hover {
+     color: tomato;
+ }
+
+
+
+ .logo:hover{
+     color: tomato;
+     transition: all 0.5s;
+ }
+
+ .active .logo:hover{
+     color: black;
+ }
+
+ .text-box {
+     width: 90%;
+     top: 38%;
+     left: 6%;
+     font-size: 3rem;
+     position: absolute;
+     color: white;
+     text-align: center;
+     overflow-y: hidden;
+ }
+
+ .text-box p {
+     font-size: 1.7rem;
+ }
+
+ .btn {
+     padding: 1rem 2rem;
+     font-size: 1.4rem;
+     color: white;
+     border: none;
+     background-color: tomato;
+     cursor: pointer;
+     margin-top: 1rem;
+ }
+
+ .text-box a {
+     text-decoration: none;
+ }
+
+ .btn:hover{
+  transform: scale(1.02); 
+  box-shadow: 0px 2px 6px 0 rgba(4,7,30,0.7);
+  transition: all 0.2s;
+ }
+
+ .buka-dari {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     padding: 1.3rem 2rem;
+     color: white;
+     background-color: tomato;
+     text-align: center;
+ }
+ 
+ nav #show-menu, nav #hide-menu, nav .bi {
+     display: none;
+ }
+
+ /* Main */
+
+ main {
+     width: 100%;
+     padding: 4rem 1rem;
+
+ }
+
+ main h1 , .kontak h1{
+     text-align: center;
+     font-weight: 800;
+     font-size: 3rem;
+     color: black;
+ }
+
+ main span , .kontak span{
+     color: tomato;
+ }
+
+ .tentang-description {
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+     color: black;
+     padding: 2rem 2rem;
+ }
+
+ .tentang-description .tentang-img img {
+     width: 500px;
+     border-radius: 10px;
+ }
+
+ .tentang-img {
+     overflow-y: hidden;
+ }
+
+ .tentang-description .tentang-img img:hover {
+     transform: scale(1.1);
+     transition: all 0.5s;
+     cursor: pointer;
+ }
+
+ .tentang-description p {
+     width: 670px;
+     font-size: 1.4rem;
+     padding-left: 2rem;
+ }
+
+ /* Menu */
+
+
+ .card {
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+     width: 100%;
+     gap: 20px 20px;
+     padding: 2rem 6rem;
+ }
+
+ .card aside {
+     position: absolute;
+     left: 0;
+     background-color: tomato;
+     padding: 2rem 1rem;
+     border-top-right-radius: 10px;
+     border-bottom-right-radius: 10px;
+ }
+
+ .card aside ul li {
+     padding: 0.4rem 0.1rem;
+ }
+
+ .card aside a {
+     color: black;
+     font-size: 2rem;
+ }
+
+ .card aside li:hover {
+     transform: scale(1.01);
+     cursor: pointer;
+     color: white;
+     transition: all 0.5s;
+ }
+
+ .card-col {
+     display: flex;
+     flex-grow: 1;
+     flex-basis: 32%;
+     flex-direction: column;
+     box-shadow: 0 4px 6px 0 rgba(4,7,30,0.7);
+     border-radius: 10px;
+ }
+
+ .card-col:hover {
+     transform: scale(1.03);
+     cursor: pointer;
+     transition: all 0.5s;
+ }
+
+ .card-img {
+     display: flex;
+     justify-content: center;
+ }
+
+
+ .card-col .card-img img {
+     width: 250px;
+     border-radius: 50%;
+     padding: 1rem 0.9rem;
+     height: 250px;
+ }
+
+ .card-col .card-description .nama {
+     text-align: center;
+     padding: 0.2rem 2rem;
+     font-weight: bold;
+ }
+
+ .card-col .card-description p {
+     text-align: center;
+     font-size: 1.1rem;
+     padding: 0.5rem;
+ }
+
+  .card-description .harga {
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+ }
+
+
+ /* Footer */
+ .footer {
+     padding: 1.3rem 1.2rem;
+     margin-top: 200px;
+     background-color: tomato;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     color: black;
+ }
+
+ .footer ul {
+     display: flex;
+     gap: 30px;
+     padding: 1rem 2rem;
+ }
+
+ .footer ul li a {
+     text-decoration: none;
+     color: black;
+     font-size: 1.5rem; 
+ }
+
+ .footer .bi {
+     padding-right: 10px;
+ }
+
+
+
+ @media screen and (max-width: 768px) {
+    
+
+     .logo {
+         font-size: 2rem;
+     }
+
+    
+
+     nav .navigasi-link  {
+         display: block;
+         background-color: tomato;
+         width: 200px;
+         height: auto;
+         min-height : auto;
+         position: fixed;
+         top: 0;
+         z-index: 9999;
+         right: -210px;
+         transition: all 0.5s;
+     }
+
+     nav .navigasi-link ul {
+         flex-direction: column;
+         padding: 30px;
+     }
+
+     nav .navigasi-link ul li a {
+         font-size: 1.2rem;
+     }
+
+     nav .navigasi-link .bi {
+         padding-left: 10px;
+         font-size: 1.2rem;
+         display: inline;
+     }
+
+     nav .side-menu{
+         display: flex;
+         gap: 20px;
+     }
+
+     nav #show-menu, nav #hide-menu{
+         display: block;
+         font-size: 2rem;
+         color: white;
+     }
+
+     .text-box {
+         min-height: 100px;
+     }
+
+     .text-box {
+         font-size: 1.3rem;
+     }
+
+     .text-box p {
+         font-size: 1rem;
+     }
+
+     .text-box .btn {
+         padding: 0.8rem 2rem;
+         font-size: 1rem;
+         display: inline-block;
+         margin-top: 20px;
+     }
+
+     .buka-dari {
+        padding: 1rem 0.5rem;
+        font-size: 13px;
+     }
+
+     .tentang-description {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+
+     .tentang-description .tentang-img img {
+         width: 400px;
+         border-radius: 10px;
+     }
+
+     .tentang-description p {
+         width: 400px;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         font-size: 1.2rem;
+         padding: 10px;
+     }
+
+     .card {
+         display: flex;
+         justify-content: center;
+         margin: 0 auto;
+     }
+
+     .card-col {
+         flex-grow: 1;
+         min-width: 350px;
+         max-width: 90%;
+     }
+
+     .card aside {
+         display: none;
+     }
+
+     .footer .bi {
+         font-size: 2rem;
+     }
+
+     .footer ul {
+         gap: 10px;
+     }
+
+     .footer ul li a{
+         font-size: 0.9rem;
+     }
+
+     .footer {
+       text-align: center;
+       width: 100%;
+     }
+
+ }
+
+ @media screen and (max-width: 500px) {
+  
+
+    .card-col {
+        max-width: 90%;
+        min-width: 350px;
+        flex-grow: 1;
+    }
+    
+
+     
+ }
