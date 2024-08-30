@@ -1,0 +1,639 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/header-image.png);
+    background-size: cover;
+    background-repeat: center;
+    padding: 10px 8%;
+    position: relative;
+}
+
+
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+
+.right-button {
+    position: relative;
+}
+
+
+
+.right-button button {
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: white;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.right-button select {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid white;
+    padding: 7px 35px;
+    outline: none;
+    border-radius: 4px;
+    color: white;
+    appearance: none;
+}
+
+.right-button .icon {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+
+}
+
+.right-button .icon-baret {
+    position: absolute;
+    bottom: 17%;
+    right: 45%;
+}
+
+
+
+.right-button option {
+    color: black;
+}
+
+
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 50px;
+ 
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    max-width: 650px;
+}
+
+.header-content h3 {
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.header-content p {
+    margin-top: 30px;
+}
+
+.header-content .email {
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.header-content .email input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+
+.header-content .email button {
+    background-color: #db0001;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+
+/* Sedang Tren */
+
+
+.sedang-tren {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    width: 1250px;
+    padding: 2rem 2rem;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sedang-tren select {
+    display: inline-block;
+    background: transparent;
+    background-clip: padding-box;
+    border: 1px solid white;
+    padding: 7px 15px;
+    margin-top: 10px;
+    outline: none;
+    border-radius: 4px;
+    color: white;
+}
+
+.sedang-tren option {
+    color: black;
+}
+
+.horizontal-scroll {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
+    scroll-snap-type: x mandatory;
+}
+
+.daftar-film {
+    display: flex;
+    width: max-content;
+    overflow-x: hidden;
+    margin-left: 20px;
+    gap: 50px;
+    position: relative;
+    scroll-snap-align: start;
+    scroll-margin-inline-start: 3rem;
+}
+
+.daftar-film .content {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+
+
+.daftar-film .content::before {
+    content: "1";
+    bottom: 0;
+    position: absolute;
+    font-size: 5rem;
+    color: black;
+    font-weight: bold;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 3px;
+}
+
+.daftar-film .content:nth-child(2)::before {
+    content: '2';
+}
+.daftar-film .content:nth-child(3)::before {
+    content: '3';
+}
+.daftar-film .content:nth-child(4)::before {
+    content: '4';
+}
+.daftar-film .content:nth-child(5)::before {
+    content: '5';
+}
+.daftar-film .content:nth-child(6)::before {
+    content: '6';
+}
+.daftar-film .content:nth-child(7)::before {
+    content: '7';
+}
+.daftar-film .content:nth-child(8)::before {
+    content: '8';
+}
+.daftar-film .content:nth-child(9)::before {
+    content: '9';
+}
+.daftar-film .content:nth-child(10)::before {
+    content: '10';
+}
+
+.daftar-film .content img {
+    width: 180px;
+}
+
+.daftar-film .content:hover {
+    transition: all 0.5s;
+    transform: scale(1.02);
+    transform-origin: center;
+}
+
+
+/* Alasan */
+.alasan {
+    display: flex;
+    justify-content: center;
+}
+
+.alasan .alasan-content {
+    display: flex;
+    flex-direction: column;
+    width: 1250px;
+    padding: 2rem 2rem;
+    gap: 30px;
+}
+
+.alasan .alasan-content .baris {
+    display: flex;
+    gap: 20px;
+}
+
+.alasan .baris .kolom {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 25%;
+    height: 290px;
+    padding: 1rem 1rem;
+    gap: 20px;
+    position: relative;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #192043 0%, #1d182f 50%, #1f1221 100%);
+}
+
+.alasan .baris .kolom .deskripsi p{
+    font-size: 1rem;
+}
+
+.alasan .baris .kolom .icon {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   padding: 0 1rem;
+}
+
+
+/* Accordion */
+.accordion {
+    display: flex;
+    justify-content: center;
+}
+
+.accordion .accordion-content {
+    width: 1250px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+    gap: 30px;
+}
+
+.accordion-list {
+    width: 100%;
+    max-width: 750px;  
+}
+
+.accordion-list li {
+    list-style-type: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion-list li label {
+    display: flex;
+    padding: 20px;
+    font-size: 25px;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion-list li label::after {
+    content: '+';
+    display: flex;
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    align-self: center;
+}
+
+.accordion-list input[type="radio"] {
+    display: none;
+}
+
+.accordion-list .deskripsi {
+    background: #303030;
+    max-height: 0;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+.accordion-list input[type="radio"]:checked + label + .deskripsi{
+    max-height: 600px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content {
+    width: 1250px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+}
+
+.footer-heading {
+    font-size: 0.8rem;
+}
+
+.footer-form .email-footer {
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    margin-top: 10px;
+    max-width: 900px;
+}
+
+.footer-form .email-footer input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+
+.footer-form .email-footer button {
+    background-color: #db0001;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    color: white;
+    padding: 18px 30px;
+}
+
+
+.footer .footer-call ,.footer-bahasa{
+    margin-top: 20px;
+    padding: 0.5rem 2rem;
+    font-size: 0.9rem;
+}
+
+.footer .footer-baris {
+    display: flex;
+    max-width: 1100px;
+    margin-top: 20px;
+    padding: 0.5rem 2rem;
+}
+
+.footer .footer-kolom {
+    display: flex;
+    flex-basis: 25%;
+    flex-grow: 1;
+    line-height: 30px;
+}
+
+.footer .footer-kolom ul li {
+    list-style-type: none;
+  
+}
+
+.footer .footer-kolom ul li a {
+    color: white;
+    font-size: 0.8rem;
+}
+
+
+.footer .footer-bahasa {
+    position: relative;
+}
+
+
+.footer .footer-bahasa select {
+    background: transparent;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 4px;
+    appearance: none;
+}
+
+.footer .footer-bahasa .icon {
+    position: absolute;
+    padding: 10px 10px;
+  }
+
+.footer .footer-bahasa .icon-baret {
+      position: absolute;
+      top: 35%;
+      left: 11%;
+  }
+
+.footer .footer-bahasa option {
+    color: black;
+    position: relative;
+}
+
+.footer span {
+    padding: 1rem 2rem;
+}
+
+@media(max-width: 768px) {
+    .logo {
+        width: 100px;
+    }
+
+
+    .right-button {
+        margin-left: 32px;
+    }
+  
+   .right-button select {
+    display: inline-block;
+    padding: 7px 50px;
+   }
+
+   
+   .right-button .icon {
+        left: 1%;
+   }
+
+   .right-button .icon i {
+    padding-right: 100px;
+    display: inline-block;
+   }
+    
+   
+
+    .header-content h1 {
+        font-size: 2rem;
+        min-width: 450px;
+    }
+
+    .header-content h3 {
+        font-size: 1rem;
+    }
+
+    .sedang-tren .text-kolom .select-tren {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem auto;       
+    }
+
+    .sedang-tren .text-kolom .select-tren select {
+        padding: 1rem 10px;
+    }
+
+    .sedang-tren .row {
+        max-width: 100vw;
+    }
+
+    .horizontal-scroll {
+        max-width: 670px;
+    }
+
+    .daftar-film {
+        display: flex;
+        gap: 20px;
+    }
+
+    .daftar-film .content img {
+        width: 125px;
+    }
+
+    .alasan .alasan-content .baris {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .alasan .baris .kolom {
+        min-height: 200px;
+    }
+
+    .accordion-list li label {
+        font-size: 18px;
+    }
+
+    .accordion-list .deskripsi {
+        font-size: 16px;
+    }
+
+    .footer .footer-call {
+        font-size: 1rem;
+    }
+
+    .footer .footer-baris {
+        flex-direction: column;
+    }
+
+    .footer .footer-kolom ul {
+        line-height: 40px;
+    }
+
+    .footer .footer-kolom ul li a {
+        font-size: 1.2rem;
+    }
+
+    .footer .footer-bahasa .icon-baret {
+        left: 36%;
+        top: 38%;
+    }
+}
+
+
+@media(max-width: 460px) {
+
+
+    .header {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .right-button {
+        margin-left: 33px;
+    }
+
+    .right-button .icon {
+        left: 3%;
+    }
+
+    .right-button select {
+        padding: 7px 30px;
+    }
+
+  
+
+    .header {
+        height: 430px;
+    }
+
+    .header-content h1 {
+        font-size: 1.2rem;
+        min-width: 300px;
+    }
+
+    .sedang-tren {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sedang-tren .row {
+        max-width: 100vw;
+    }
+
+    .sedang-tren .select-tren option {
+        max-width: 20px;
+    }
+
+    .accordion-list li label {
+        font-size: 1rem;
+    }
+
+    .footer .footer-call {
+        font-size: 0.9rem;
+    }
+
+    .footer .footer-kolom ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 400px) {
+    .right-button {
+        margin-left: 38px;
+        min-width: 300px;
+    }
+
+    .right-button .icon {
+        left: 2%;
+        top: 20%;
+
+    }
+
+    .right-button select {
+        padding: 7px 25px;
+    }
+
+    .right-button .icon-baret {
+        right: 65%;
+    }
+}

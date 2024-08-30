@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Netflix Clone</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <nav>
+            <img src="images/logo.png" alt="" class="logo">
+            <div class="right-button" >         
+                <div class="icon">
+                    <i class="bi bi-translate"></i>
+                </div>
+                <select name="bahasa" id="">
+                    <option value="">Indonesia</option>
+                    <option value="">English</option>
+                </select>
+                <div class="icon-baret">
+                    <i class="bi bi-caret-down-fill"></i>
+                </div>
+                <button>Masuk</button>
+            </div>
+        </nav>
+        <div class="header-content">
+            <h1>Film, acara TV tak terbatas, dan banyak lagi</h1>
+            <h3>Harga mulai dari Rp 54.000. Batalkan kapan pun.</h3>
+            <p>Siap menonton? Masukkan email untuk membuat atau memulai lagi keanggotaanmu.</p>
+            <form action="" class="email">
+                <input type="email" name="email" id="email" placeholder="Alamat Email" required>
+                <button type="submit">Mulai </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sedang Tren -->
+     <div class="sedang-tren">
+        <div class="row">
+            <div class="text-kolom">
+                <h2>Sedang Tren Sekarang</h2>
+                <div class="select-tren">
+                <select name="bahasa" id=""> 
+                    <option value="">Indonesia</option>
+                    <option value="">Global</option>
+                </select>
+                <select name="film" id="">
+                    <option value="">Film</option>
+                    <option value="">Acara TV</option>
+                </select>
+            </div>
+        </div>
+            
+            <div class="horizontal-scroll">
+            <div class="daftar-film">
+                <div class="content">
+                    <img src="images/badaruwuhi.png" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/ghostbusters.png" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/kingsmann-the-secrett.png" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/mission-cross.png" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/the-union.png" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/kingsmann-the-golden.png" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/kabut-berduri.png" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/ticket-paradise.png" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/loloand-thekid.png" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/pasutri-gaje.png" alt="">
+                </div>
+            </div>
+        </div>  
+        </div>
+     </div>
+
+     <!-- Alasan Lainnya untuk bergabung -->
+      <div class="alasan">
+          <div class="alasan-content">
+            <div class="text-kolom">
+              <h2>Alasan Lainnya untuk Bergabung</h2>
+            </div>
+            <div class="baris">
+            <div class="kolom">
+                <div class="title">
+                    <h3>Nikmati di TV-mu</h3>
+                </div>
+                <div class="deskripsi">
+                    <p>Tonton di Smart TV, Playstation, Xbox, Chromecast, Apple TV, pemutar Blu-ray, dan banyak lagi.
+                    </p>
+                </div>
+                <div class="icon">
+                    <img src="images/tv.png" alt="">
+                </div>
+            </div>
+            <div class="kolom">
+                <div class="title">
+                    <h3>Download acara TV untuk menontonnya secara offline</h3>
+                </div>
+                <div class="deskripsi">
+                    <p>Simpan favoritmu dengan mudah agar selalu ada acara TV dan film yang bisa ditonton.
+                    </p>
+                </div>
+                <div class="icon">
+                    <img src="images/download.png" alt="">
+                </div>
+            </div>
+            <div class="kolom">
+                <div class="title">
+                    <h3>Tonton di mana pun</h3>
+                </div>
+                <div class="deskripsi">
+                    <p>Streaming film dan acara TV tak terbatas di ponsel, tablet, laptop, dan TV-mu.
+                    </p>
+                </div>
+                <div class="icon">
+                    <img src="images/tonton.png" alt="">
+                </div>
+            </div>
+            <div class="kolom">
+                <div class="title">
+                    <h3>Buat profil untuk anak</h3>
+                </div>
+                <div class="deskripsi">
+                    <p>Kirim anak-anak untuk bertualang bersama karakter favorit di dunia yang dibuat khusus untuk mereka — gratis dengan keanggotaanmu.
+                    </p>
+                </div>
+                <div class="icon">
+                    <img src="images/anak.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+
+      <!-- Accordion -->
+      <div class="accordion">
+        <div class="accordion-content">
+            <div class="text-kolom">
+                <h2>Tanya Jawab Umum</h2>
+            </div>
+            <ul class="accordion-list">
+                <li>
+                    <input type="radio" name="accordion" id="pertama">
+                    <label for="pertama">Apa itu Netflix</label>
+                    <div class="deskripsi">
+                        <p>Netflix adalah layanan streaming yang menawarkan berbagai acara TV pemenang penghargaan, film, anime, dokumenter, dan banyak lagi di ribuan perangkat yang terhubung ke Internet.
+                            Kamu bisa menonton sepuasnya, kapan pun kamu mau, tanpa satu iklan pun – semuanya dengan satu harga bulanan yang murah. Selalu ada tontonan baru dan acara TV serta film baru yang ditambahkan setiap minggu!</p>
+                    </div>
+                </li>   
+                <li>
+                    <input type="radio" name="accordion" id="kedua">
+                    <label for="kedua">Berapa biaya berlangganan Netflix</label>
+                    <div class="deskripsi">
+                        <p>Tonton Netflix di smartphone, tablet, Smart TV, laptop, atau perangkat streaming-mu, semuanya dengan satu harga bulanan tetap Rentang harga mulai dari Rp 54.000 hingga Rp 186.000 per bulan. Tanpa biaya ekstra, tanpa kontrak.</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="ketiga">
+                    <label for="ketiga">Dimana saya bisa menonton</label>
+                    <div class="deskripsi">
+                        <p>Tonton di mana pun, kapan pun. Masuk ke akun Netflix-mu untuk menonton langsung di netflix.com dari komputer pribadi atau di perangkat yang terhubung ke Internet dan mendukung aplikasi Netflix, termasuk smart TV, smartphone, tablet, pemutar media streaming, dan konsol game.
+
+                            Kamu juga bisa men-download acara favoritmu dengan aplikasi iOS atau Android. Gunakan download untuk menonton saat kamu di perjalanan dan tidak punya koneksi Internet. Bawa Netflix ke mana saja.</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="keempat">
+                    <label for="keempat">Bagaimana cara membatalkannya</label>
+                    <div class="deskripsi">
+                        <p>Netflix fleksibel. Tanpa kontrak menyebalkan dan tanpa komitmen. Kamu dapat dengan mudah membatalkan akunmu secara online dengan dua kali klik. Tanpa biaya pembatalan – mulai atau hentikan akunmu kapan pun.</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="kelima">
+                    <label for="kelima">Apa yang bisa ditonton di Netflix</label>
+                    <div class="deskripsi">
+                        <p>Netflix memiliki pustaka lengkap yang berisi film panjang, film dokumenter, acara TV, anime, Netflix original pemenang penghargaan, dan lebih banyak lagi. Tonton sepuasnya, kapan pun kamu mau.</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="keenam">
+                    <label for="keenam">Apakah Netflix sesuai bagi anak-anak</label>
+                    <div class="deskripsi">
+                        <p>Pengalaman Netflix Anak disertakan dalam keanggotaan agar kamu punya kontrol orang tua saat anak-anak menikmati acara TV dan film untuk keluarga di rumah. <br><br>
+
+                            Profil anak dilengkapi kontrol orang tua yang dilindungi PIN sehingga kamu bisa membatasi rating usia konten yang bisa ditonton anak dan memblokir judul tertentu yang tidak boleh ditonton anak-anak.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>  
+      </div>
+
+      <!-- Footer -->
+       <footer class="footer">
+            <div class="footer-content">
+                    <div class="footer-heading">
+                    <p>Siap menonton? Masukkan email untuk membuat atau memulai lagi keanggotaanmu.</p>                    
+                </div>
+                <div class="footer-form">
+                    <form action="" class="email-footer">
+                    <input type="email" name="email" id="email" placeholder="Alamat email">
+                    <button type="submit">Mulai</button>
+                </form>
+                </div>
+                <div class="footer-call">
+                    <p>Ada pertanyaan? Hubungi 007-803-321-2148</p>
+                </div>
+                <div class="footer-baris">
+                    <div class="footer-kolom">
+                        <ul>
+                            <li><a href="">Tanya Jawab</a></li>
+                            <li><a href="">Hubungan Investor</a></li>
+                            <li><a href="">Cara Menonton</a></li>
+                            <li><a href="">Informasi Perusahaan</a></li>
+                            <li><a href="">Hanya di Netflix</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-kolom">
+                        <ul>
+                            <li><a href="">Pusat Bantuan</a></li>
+                            <li><a href="">Lowongan Kerja</a></li>
+                            <li><a href="">Ketentuan Pengguna</a></li>
+                            <li><a href="">Hubungi Kami</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-kolom">
+                        <ul>
+                            <li><a href="">Akun</a></li>
+                            <li><a href="">Tukar Kartu Hadiah</a></li>
+                            <li><a href="">Privasi</a></li>
+                            <li><a href="">Uji Kecepatan</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-kolom">
+                        <ul>
+                            <li><a href="">Pusat Media</a></li>
+                            <li><a href="">Beli Kartu Hadiah</a></li>
+                            <li><a href="">Preferensi Cookie</a></li>
+                            <li><a href="">Informasi Legal</a></li>
+                        </ul>
+                    </div>
+
+                   
+                </div>
+                <div class="footer-bahasa">
+                    <div class="icon">
+                        <i class="bi bi-translate"></i>
+                    </div> 
+
+                    <select name="" id="">
+                        <option value="">Indonesia</option>
+                        <option value="">English</option>
+                    </select>
+                  
+                    <div class="icon-baret">
+                        <i class="bi bi-caret-down-fill"></i>
+                    </div>
+                    
+                </div>
+                <span>Netflix Indonesia</span>
+                </div>
+            </div>
+       </footer>
+</body>
+</html>
