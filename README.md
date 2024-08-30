@@ -1,7 +1,3 @@
-# Belajar Penguasaan HTML
-
-Belajar menggunakan flexbox
-
 # Belajar Penguasaan HTML 🔥
 
 Repositori pribadi yang berisi kumpulan latihan dan proyek HTML dan CSS yang saya buat selama proses belajar. Repositori ini berfungsi sebagai catatan perjalanan saya dalam memahami dasar-dasar pembuatan website dan mengembangkan keterampilan coding saya.
