@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica',sans-serif;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/bg-agoda-homepage.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .left-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    color: black;
+}
+
+.header .left-nav .logo img {
+    width: 65px;
+    height: 65px;
+}
+
+.header .left-nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.header .left-nav ul li {
+    list-style-type: none;
+}
+
+.header .left-nav ul li a, .header .right-nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+
+
+
+.header .right-nav {
+    display: flex;
+    width: 35%;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.header .right-nav ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header .right-nav ul li {
+    list-style-type: none;
+}
+
+.header .right-nav  ul li .bi {
+    font-size: 25px;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.header .right-nav ul li .bi:hover {
+    background-color: rgb(83, 146, 249);
+    color: white;
+}
+
+
+.header .right-nav .btn-masuk {
+    color: rgb(83, 146, 249);
+    padding: 12px;
+}
+
+.header .right-nav .btn-masuk:hover {
+    color: white;
+    background-color: rgb(83, 146, 249);
+    border-radius: 5px;
+}
+
+.header .right-nav .btn-buat-akun {
+    padding: 12px;
+    color: white;
+    border: 1px solid rgb(83, 146, 249);
+    color: rgb(83, 146, 249);
+    border-radius: 5px;
+}
+
+.header .right-nav .btn-buat-akun:hover{
+    color: white;
+    background-color: rgb(83, 146, 249);
+}
+
+.header .text-box h1{
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.header .nav-box {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    top: 3%;
+}
+
+.header .nav-box .paket {
+    position: absolute;
+    top: 10%;
+    left: 41%;
+    background-color: #e12d2d;
+    color: white;
+    font-size: 12px;
+    padding: 4px 7px;
+}
+
+.header .nav-box .baru {
+    position: absolute;
+    top: 10%;
+    left: 61%;
+    background-color: #e12d2d;
+    color: white;
+    font-size: 12px;
+    padding: 4px 7px;
+}
+
+.header .nav-box .nav-links ul{
+    display: flex;
+    gap: 30px;
+    padding: 15px 70px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.7);
+}
+
+.header .nav-box .nav-links ul li {
+    list-style-type: none;
+}
+
+.header .nav-box .nav-links ul li .bi {
+    margin-right: 5px;
+}
+
+.header .nav-box .nav-links ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.header .card-content-box {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.header .card-content {
+    background-color: #f8f7f9;
+    width: 80%;
+    padding: 50px 30px;
+    height: 400px;
+    border-radius: 8px;
+}
+
+.header .card-content .card-tag a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 10px 15px;
+    border: 1px solid #eff4fc;
+    border-radius: 5pc;
+    display: inline-block;
+}
+
+.header .card-content .card-form {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+
+.header .card-content .card-form form {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.header .card-content .card-form input[type="text"] {
+    width: 100%;
+    padding: 20px 60px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 1px solid #eff4fc;
+}
+
+
+
+
+
+
+.header .card-content .card-form form .bi {
+    position: absolute;
+}
+.header .card-content .card-form .date {
+    width: 50%;
+    display: flex;
+    margin-top: 10px;
+} 
+
+.header .card-content .card-form .date input[type="date"] {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+
+.header .card-content .card-form .kamar {
+    background-color: white;
+    width: 49%;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 20px 20px;
+    font-size: 16px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header .card-content .card-form .kamar label {
+    width: 100%;
+    display: flex;
+    padding: 2px 10px;
+    align-items: center;
+}
+
+
+
+
+.header .card-content .card-form .kamar ul,.header .card-content .card-form .kamar input[type="checkbox"] {
+    display: none;
+}
+
+.header .card-content .card-form .kamar input[type="checkbox"]:checked ~ #kamar-dropdown {
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+}
+
+#kamar-dropdown {
+    background-color: white;
+    margin-top: 25px;
+    box-shadow: rgba(0, 0, 0, 0.7);
+    padding: 15px 30px;
+    border-radius: 8px;
+}
+
+#kamar-dropdown li {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+
+
+#kamar-dropdown span {
+    color: #999;
+    font-size: 12px;
+    padding-bottom: 20px;
+    line-height: 1px;
+}
+
+
+.header .card-content-box .tambah-penerbangan {
+    margin-top: 30px;
+    padding: 10px 10px;
+    width: fit-content;
+}
+
+.header .card-content-box .tambah-penerbangan a {
+    color: rgb(83, 146, 249);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header .card-content-box .tambah-penerbangan .bi {
+    font-size: 23px;
+    padding: 10px 10px;
+}
+
+.header .card-content-box .tambah-penerbangan:hover {
+    border: 1px solid rgb(83, 146, 249);
+    border-radius: 5pc;
+}
+
+.header .card-content-box .cari {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10%;
+}
+
+.header .card-content-box .cari .btn-cari {
+    width: 50%;
+    border: none;
+    background-color: rgb(83, 146, 249);
+    border-radius: 8px;
+    padding: 15px 15px;
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+
+
