@@ -279,7 +279,7 @@ nav {
 #kamar-dropdown {
     background-color: white;
     margin-top: 25px;
-    box-shadow: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.7);
     padding: 15px 30px;
     border-radius: 8px;
 }
@@ -351,11 +351,11 @@ nav {
     flex-direction: column;
 }
 
-.destinasi .destinasi-title h2 {
+.destinasi .destinasi-title h2 ,.promo-akomodasi .promo-title h2 , .promo-penerbangan .promo-penerbangan-title h2{
     font-weight: 600;
     color: rgb(37, 44, 56);
     font-size: 30px;
-    }
+}
 
 .destinasi .horizontal-scroll {
     display: flex;
@@ -384,6 +384,33 @@ nav {
 .destinasi .horizontal-scroll .card .img-description span {
     font-size: 12px;
 }
+
+
+
+/* Promo Akomodasi */
+.promo-akomodasi,.promo-penerbangan {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 9%;
+}
+
+.promo-akomodasi .horizontal-promo , .promo-penerbangan .horizontal-promo-penerbangan {
+    display: flex;
+    max-width: 80%;
+    overflow-x: scroll;
+    gap: 20px;
+    scrollbar-color: transparent transparent;
+    margin-top: 30px;
+}
+
+.promo-akomodasi .horizontal-promo .img-promo img, .promo-penerbangan .horizontal-promo-penerbangan img {
+    width: auto;
+    height: 185px;
+    border-radius: 8px;
+}
+
 
 
 
