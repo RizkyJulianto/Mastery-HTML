@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>   
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">   
+
     <title>Agoda Clone</title>
 </head>
 <body>
@@ -51,12 +56,12 @@
             </div>
             <div class="nav-links">
                 <ul>
-                    <li><a href=""><i class="bi bi-buildings-fill"></i>Hotel</a></li>
-                    <li><a href=""><i class="bi bi-houses-fill"></i>Rumah & Apt</a></li>
-                    <li><a href=""><i class="bi bi-building-fill-up"></i>Pesawat + Hotel</a></li>
-                    <li><a href=""><i class="bi bi-airplane-fill"></i>Pesawat</a></li>
-                    <li><a href=""><i class="bi bi-map-fill"></i>Aktivitas</a></li>
-                    <li><a href=""><i class="bi bi-car-front-fill"></i>Transfer Bandara</a></li>
+                    <li><a href="#hotel"><i class="bi bi-buildings-fill"></i>Hotel</a></li>
+                    <li><a href="#rumah&apart"><i class="bi bi-houses-fill"></i>Rumah & Apt</a></li>
+                    <li><a href="#pesawathotel"><i class="bi bi-building-fill-up"></i>Pesawat + Hotel</a></li>
+                    <li><a href="#pesawat"><i class="bi bi-airplane-fill"></i>Pesawat</a></li>
+                    <li><a href="#aktivitas"><i class="bi bi-map-fill"></i>Aktivitas</a></li>
+                    <li><a href="#transfer"><i class="bi bi-car-front-fill"></i>Transfer Bandara</a></li>
                 </ul>
             </div>
             <div class="baru">
@@ -65,7 +70,7 @@
         </div>
 
         <div class="card-content-box">
-            <div class="card-content">
+            <div class="card-content" id="hotel">
             <div class="card-tag">
                 <a href="">Penginapan Malam Hari</a>
                 <a href="">Penginapan Siang Hari</a>
@@ -75,21 +80,20 @@
                     <input type="text" placeholder="Ketik kota tujuan atau nama properti" >
 
                     <div class="date">
+                        <button id="date">Tampilkan Kalender</button>
+                        <div id="kalender"></div>
                         <input type="date" name="from" id="from">
                         <input type="date" name="to" id="to">
                     </div>
                     <div class="kamar">
+                        <i class="bi bi-person"></i>
                         <input type="checkbox" name="kamar" id="kamar">
                         <label for="kamar">2 Dewasa </label>
                         <label for="kamar" style="color: #999; font-size: 14px;">1 Kamar </label>
 
-                        <ul id="kamar-dropdown">
-                            <li>Kamar</li>
-                            <li>Dewasa</li>
-                            <span>Usia 18 tahun ke atas</span>
-                            <li>Anak</li>
-                            <span>Usia 0-17 tahun</span>
-                        </ul>
+                        <div id="kamar-dropdown">
+                           
+                        </div>
                     </div>
 
                 </form>
@@ -102,6 +106,172 @@
             <div class="cari">
                 <button type="submit" class="btn-cari">Cari</button>
             </div>
+        </div>
+
+            <!-- Rumah & Apart Content -->
+            <div class="card-content" id="rumah&apart" >
+            <div class="card-form">
+                <form action="">
+                    <input type="text" placeholder="Ketik kota tujuan atau nama properti" >
+
+                    <div class="date">
+                        <input type="date" name="from" id="from">
+                        <input type="date" name="to" id="to">
+                    </div>
+                    <div class="kamar">
+                        <i class="bi bi-person"></i>
+                        <input type="checkbox" name="kamar" id="kamar">
+                        <label for="kamar">2 Dewasa </label>
+                        <label for="kamar" style="color: #999; font-size: 14px;">1 Kamar </label>
+
+                        <div id="kamar-dropdown">
+                           
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            
+            <div class="tambah-penerbangan">
+                <a href=""><i class="bi bi-plus"></i>Tambah Penerbangan</a>
+            </div>
+
+            <div class="cari">
+                <button type="submit" class="btn-cari">Cari</button>
+            </div>
+            </div>
+
+            <!-- Pesawat & Hotel Content -->
+            <div class="card-content" id="pesawathotel" >
+            <div class="card-form">
+                <form action="">
+                    <input type="text" placeholder="Ketik kota tujuan atau nama properti" >
+
+                    <div class="date">
+                        <input type="date" name="from" id="from">
+                        <input type="date" name="to" id="to">
+                    </div>
+                    <div class="kamar">
+                        <i class="bi bi-person"></i>
+                        <input type="checkbox" name="kamar" id="kamar">
+                        <label for="kamar">2 Dewasa </label>
+                        <label for="kamar" style="color: #999; font-size: 14px;">1 Kamar </label>
+
+                        <div id="kamar-dropdown">
+                           
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            
+            <div class="tambah-penerbangan">
+                <a href=""><i class="bi bi-plus"></i>Tambah Penerbangan</a>
+            </div>
+
+            <div class="cari">
+                <button type="submit" class="btn-cari">Cari</button>
+            </div>
+        </div>
+
+            <!-- Pesawat  Content -->
+            <div class="card-content" id="pesawat" >
+            <div class="card-form">
+                <form action="">
+                    <input type="text" placeholder="Ketik kota tujuan atau nama properti" >
+
+                    <div class="date">
+                        <input type="date" name="from" id="from">
+                        <input type="date" name="to" id="to">
+                    </div>
+                    <div class="kamar">
+                        <i class="bi bi-person"></i>
+                        <input type="checkbox" name="kamar" id="kamar">
+                        <label for="kamar">2 Dewasa </label>
+                        <label for="kamar" style="color: #999; font-size: 14px;">1 Kamar </label>
+
+                        <div id="kamar-dropdown">
+                           
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            
+            <div class="tambah-penerbangan">
+                <a href=""><i class="bi bi-plus"></i>Tambah Penerbangan</a>
+            </div>
+
+            <div class="cari">
+                <button type="submit" class="btn-cari">Cari</button>
+            </div>
+        </div>
+
+            <!-- Aktivitas -->
+            <div class="card-content" id="aktivitas" >
+            <div class="card-form">
+                <form action="">
+                    <input type="text" placeholder="Ketik kota tujuan atau nama properti" >
+
+                    <div class="date">
+                        <input type="date" name="from" id="from">
+                        <input type="date" name="to" id="to">
+                    </div>
+                    <div class="kamar">
+                        <i class="bi bi-person"></i>
+                        <input type="checkbox" name="kamar" id="kamar">
+                        <label for="kamar">2 Dewasa </label>
+                        <label for="kamar" style="color: #999; font-size: 14px;">1 Kamar </label>
+
+                        <div id="kamar-dropdown">
+                           
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            
+            <div class="tambah-penerbangan">
+                <a href=""><i class="bi bi-plus"></i>Tambah Penerbangan</a>
+            </div>
+
+            <div class="cari">
+                <button type="submit" class="btn-cari">Cari</button>
+            </div>
+        </div>
+
+            <!-- Transfer Bandara Content -->
+            <div class="card-content" id="transfer" >
+            <div class="card-form">
+                <form action="">
+                    <input type="text" placeholder="Ketik kota tujuan atau nama properti" >
+
+                    <div class="date">
+                        <input type="date" name="from" id="from">
+                        <input type="date" name="to" id="to">
+                    </div>
+                    <div class="kamar">
+                        <i class="bi bi-person"></i>
+                        <input type="checkbox" name="kamar" id="kamar">
+                        <label for="kamar">2 Dewasa </label>
+                        <label for="kamar" style="color: #999; font-size: 14px;">1 Kamar </label>
+
+                        <div id="kamar-dropdown">
+                           
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            
+            <div class="tambah-penerbangan">
+                <a href=""><i class="bi bi-plus"></i>Tambah Penerbangan</a>
+            </div>
+
+            <div class="cari">
+                <button type="submit" class="btn-cari">Cari</button>
+            </div>
+        </div>
         </div>
         </div>
      </header>
@@ -290,5 +460,10 @@
        </section>
       <!-- Promo Penerbangan End -->
 
+       <!-- Rekomendasi rumah liburan untuk anda -->
+        
+       <!-- Rekomendasi rumah liburan untuk anda end -->
+
+      <script src="js/script.js"></script>
 </body>
 </html>
