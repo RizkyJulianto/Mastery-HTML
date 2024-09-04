@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
     showContainer();
+    showRumahContent();
 })
 
 // Pilih Card content mana yang akan ditampilkan pertama kali
@@ -10,6 +11,16 @@ function showContainer() {
     });
 
     document.getElementById('hotel').style.display = 'block';
+}
+
+// Pilih Card content Rumah mana yang akan ditampilkan pertama kali
+function showRumahContent() {
+    const rumahContens = document.querySelectorAll('.card-rumah');
+    rumahContens.forEach(content => {
+        content.style.display = 'none';
+    });
+
+    document.getElementById('rumah-jakarta').style.display = 'flex';
 }
 
 
@@ -29,4 +40,18 @@ navLinks.forEach(link => {
     });
 });
 
+// navigasi card-content rumah 
+const navRumah = document.querySelectorAll('.link-rekomendasi a');
+navRumah.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetRumahId = link.getAttribute('href').substring(1);
 
+        const rumah = document.querySelectorAll('.card-rumah');
+        rumah.forEach(content => {
+            content.style.display = 'none';
+        });
+
+       document.getElementById(targetRumahId).style.display = 'flex';
+    });
+});

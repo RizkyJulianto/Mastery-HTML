@@ -453,6 +453,13 @@ nav {
     gap: 40px;
 }
 
+.rekomendasi-rumah .underline {
+    height: 1px;
+    background-color:  rgb(221, 223, 226);
+    width: 40%;
+    margin-top: 10px;
+}
+
 .rekomendasi-rumah .link-rekomendasi ul li {
     list-style-type: none;
 }
@@ -466,7 +473,7 @@ nav {
     width: 85%;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 24px;
     gap: 15px;
     flex-wrap: wrap;
 }
