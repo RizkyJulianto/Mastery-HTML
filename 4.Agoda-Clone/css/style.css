@@ -6,7 +6,7 @@
 }
 
 body {
-    min-height: 5000px;
+    min-height: fit-content;
 
 }
 
@@ -601,5 +601,39 @@ nav {
 
 
 
+/* Footer */
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(233, 235, 238);
+    margin-top: 9%;
+    gap: 20px;
+}
+
+.footer .footer-col {
+    flex-basis: 16%;
+    padding: 48px 16px;
+}
+
+.footer .footer-col h4 {
+    color: rgb(42, 42, 46);
+
+}
+
+.footer .footer-col ul {
+    margin-top: 15px;
+}
+
+.footer .footer-col ul li {
+    list-style-type: none;
+    line-height: 25px;
+
+}
+
+.footer .footer-col ul li a {
+    color: rgb(42, 42, 46);
+    text-decoration: none;
+}
 
 
