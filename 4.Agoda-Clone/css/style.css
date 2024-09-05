@@ -392,11 +392,16 @@ nav {
     gap: 15px;
     margin-top: 40px;
     scrollbar-color: transparent transparent;
+    scroll-snap-type: x mandatory;
 }
 
 .destinasi .horizontal-scroll .img-content img {
     width: 200px;
     border-radius: 16px;
+}
+
+.destinasi .horizontal-scroll .card {
+    scroll-snap-align: center;
 }
 
 .destinasi .horizontal-scroll .card .img-description {
