@@ -45,11 +45,21 @@ const navRumah = document.querySelectorAll('.link-rekomendasi a');
 navRumah.forEach(link => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
+
+        navRumah.forEach(otherLink => {
+            if(otherLink !== link) {
+                otherLink.classList.remove('active');
+            }
+        });
+
+        link.classList.toggle('active');
+
         const targetRumahId = link.getAttribute('href').substring(1);
 
         const rumah = document.querySelectorAll('.card-rumah');
         rumah.forEach(content => {
             content.style.display = 'none';
+    
         });
 
        document.getElementById(targetRumahId).style.display = 'flex';

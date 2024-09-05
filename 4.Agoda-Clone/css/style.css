@@ -469,6 +469,11 @@ nav {
     text-decoration: none;
 }
 
+.rekomendasi-rumah .link-rekomendasi .active {
+    color: #5392f9;
+    transition: all 0.3s;
+}
+
 .rekomendasi-rumah .card-rumah {
     width: 85%;
     display: flex;
