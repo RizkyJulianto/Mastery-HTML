@@ -5,10 +5,7 @@
     font-family: 'Helvetica',sans-serif;
 }
 
-body {
-    min-height: fit-content;
 
-}
 
 .header {
     position: relative;
@@ -21,8 +18,9 @@ body {
 
 nav {
     width: 100%;
-    background-color: white;
     color: black;
+    background-color: white;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.7);
     padding: 5px 5px;
     display: flex;
     align-items: center;
@@ -154,12 +152,16 @@ nav {
     background-color: rgb(83, 146, 249);
 }
 
-.header .text-box h1{
-    font-size: 25px;
+.header .text-box {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 100px;
     color: white;
+    font-size: 18px;
     text-transform: uppercase;
-    text-align: center;
-    margin-top: 30px;
 }
 
 .header .nav-box {
@@ -167,7 +169,7 @@ nav {
     width: 100%;
     justify-content: center;
     position: relative;
-    top: 3%;
+    top: 23%;
 }
 
 .header .nav-box .paket {
@@ -218,13 +220,14 @@ nav {
     display: flex;
     width: 100%;
     justify-content: center;
+    margin-top: 120px;
 }
 
 .header .card-content {
     background-color: #f8f7f9;
     width: 80%;
     padding: 50px 30px;
-    height:400px;
+    height:350px;
     border-radius: 8px;
 }
 
@@ -316,6 +319,7 @@ nav {
 .header .card-content .card-form .kamar label {
     width: 100%;
     display: flex;
+    cursor: pointer;
     padding: 2px 45px;
     align-items: center;
 
@@ -375,20 +379,20 @@ nav {
 
 .header .card-content-box .tambah-penerbangan {
     margin-top: 30px;
-    padding: 10px 10px;
     width: fit-content;
 }
 
 .header .card-content-box .tambah-penerbangan a {
     color: rgb(83, 146, 249);
     font-weight: bold;
+    padding: 10px 10px;
     text-decoration: none;
     font-size: 16px;
 }
 
 
 
-.header .card-content-box .tambah-penerbangan:hover {
+.header .card-content-box .tambah-penerbangan a:hover {
     border: 1px solid rgb(83, 146, 249);
     border-radius: 5pc;
 }
@@ -397,8 +401,9 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 30%;
+    position: absolute;
+    left: 0;
+    bottom: 5%;
 }
 
 .header .card-content-box .cari .btn-cari {
@@ -418,7 +423,7 @@ nav {
     display: flex;
     align-items: center;
     width: 100%;
-    margin-top: 10%;
+    margin-top: 12%;
     flex-direction: column;
 }
 

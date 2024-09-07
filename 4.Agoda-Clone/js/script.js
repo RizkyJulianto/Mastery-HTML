@@ -1,7 +1,8 @@
+
 window.addEventListener('DOMContentLoaded', function() {
     showContainer();
     showRumahContent();
-})
+});
 
 // Pilih Card content mana yang akan ditampilkan pertama kali
 function showContainer() {
