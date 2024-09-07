@@ -26,10 +26,24 @@
                         <li><a href="">Pesawat + Hotel</a></li>
                         <li><a href="">Pesawat</a></li>
                         <li><a href="">Aktivitas</a></li>
-                        <li><a href="">Transportasi</a></li>
+                        <li>
+                            <a href="#transport" id="showTransport">Transportasi</a>
+                         
+                        </li>
+                        
                         <li><a href="">...</a></li>
                     </ul>
+                    
                 </div>
+            </div>
+            <div id="transport">
+                <ul class="transport">
+                    <li>Bus</li>
+                    <li>Kereta</li>
+                    <li>Feri</li>
+                    <li>Transportasi Bandara</li>
+                    <li>Penyewaan Mobil</li>
+                </ul>
             </div>
 
             <div class="right-nav">
@@ -85,12 +99,38 @@
                     </div>
                     <div class="kamar">
                         <i class="bi bi-person"></i>
+                    
                         <input type="checkbox" name="kamar" id="kamar">
                         <label for="kamar">2 Dewasa </label>
-                        <label for="kamar" style="color: #999; font-size: 14px;">1 Kamar </label>
+                        <label for="kamar" style="color: #999; font-size: 14px; ;">1 Kamar </label>
 
                         <div id="kamar-dropdown">
-                           
+                           <ul>
+                            <li class="list">
+                                kamar
+                            <div class="list-action">
+                                <button>+</button>
+                                <span>0</span>
+                                <button>-</button>
+                            </div>
+                            </li>
+                            <li class="list">
+                                Dewasa
+                                <div class="list-action">
+                                    <button>+</button>
+                                    <span>0</span>
+                                    <button>-</button>
+                                </div>
+                            </li>
+                            <li class="list">
+                                Anak
+                                <div class="list-action">
+                                    <button>+</button>
+                                    <span>0</span>
+                                    <button>-</button>
+                                </div>
+                            </li>
+                           </ul>
                         </div>
                     </div>
 

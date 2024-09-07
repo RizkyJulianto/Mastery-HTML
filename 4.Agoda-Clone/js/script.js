@@ -65,3 +65,14 @@ navRumah.forEach(link => {
        document.getElementById(targetRumahId).style.display = 'flex';
     });
 });
+
+// Munculkan transportasi 
+const link = document.getElementById('showTransport');
+const transport = document.getElementById('transport');
+link.addEventListener('click', function() {
+    if(transport.style.display === 'block') {
+        transport.style.display = 'none';
+    } else {
+        transport.style.display = 'block'
+    }
+});
