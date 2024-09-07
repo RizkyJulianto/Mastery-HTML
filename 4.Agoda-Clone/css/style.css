@@ -249,12 +249,13 @@ nav {
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
 }
 
 
 .header .card-content .card-form input[type="text"] {
     width: 100%;
-    padding: 20px 60px;
+    padding: 20px 54px;
     border-radius: 8px;
     font-size: 16px;
     border: 1px solid #eff4fc;
@@ -265,8 +266,14 @@ nav {
 
 
 
-.header .card-content .card-form form .bi {
+.header .card-content .card-form form > .bi {
     position: absolute;
+    top: 7%;
+    left: 1%;
+    padding: 5px 5px;
+    font-size: 25px;
+    color: #999;
+    
 }
 .header .card-content .card-form .date {
     width: 50%;
@@ -299,8 +306,10 @@ nav {
 
 
 
+
 .card-form .kamar .bi{
     padding: 5px 5px;
+    position: absolute;    
     font-size: 25px;
 } 
 
