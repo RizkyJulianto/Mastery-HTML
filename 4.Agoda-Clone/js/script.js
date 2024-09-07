@@ -66,13 +66,23 @@ navRumah.forEach(link => {
     });
 });
 
-// Munculkan transportasi 
+// Munculkan transportasi & Lainnya
 const link = document.getElementById('showTransport');
+const linkLainnya = document.getElementById('showLainnya');
 const transport = document.getElementById('transport');
+const lainnya = document.getElementById('lainnya');
 link.addEventListener('click', function() {
     if(transport.style.display === 'block') {
         transport.style.display = 'none';
     } else {
         transport.style.display = 'block'
+    }
+});
+
+linkLainnya.addEventListener('click', function() {
+    if(lainnya.style.display === 'block') {
+        lainnya.style.display = 'none';
+    } else {
+        lainnya.style.display = 'block'
     }
 });
