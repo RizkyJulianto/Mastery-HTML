@@ -331,25 +331,43 @@ nav {
 
 
 
-.header .card-content .card-form .kamar #kamar-dropdown,.header .card-content .card-form .kamar input[type="checkbox"] {
+.header .card-content .card-form .kamar #kamar-dropdown ,
+.header .card-content .card-form .kamar #kamar-dropdown-rumah,
+.header .card-content .card-form .kamar input[type="checkbox"] {
     display: none;
 }
 
-.header .card-content .card-form .kamar input[type="checkbox"]:checked ~ #kamar-dropdown {
+.header .card-content .card-form .kamar input[type="checkbox"]:checked ~ #kamar-dropdown,
+.header .card-content .card-form .kamar input[type="checkbox"]:checked ~ #kamar-dropdown-rumah 
+{
     display: block;
-    z-index: 99;
+    z-index: 999;
 }
 
-#kamar-dropdown {
+#kamar-dropdown,#kamar-dropdown-rumah {
     background-color: white;
-    margin-top: 30px;
+    margin-top: 40px;
     width: 60%;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 6px 0 rgba(119, 95, 95, 0.7);
     padding: 15px 15px;
     border-radius: 8px;
+    position: relative;
 }
 
-#kamar-dropdown .kamar-group {
+#kamar-dropdown::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    top: -6%;
+    left: 10%;
+    height: 0;
+    border-bottom:solid 15px white;
+	border-left:solid 10px #f8f7f9;
+	border-right:solid 10px #f8f7f9;
+
+}
+
+#kamar-dropdown .kamar-group , #kamar-dropdown-rumah .kamar-group{
     display: flex;
     width: 100%;
     height: 180px;
@@ -359,7 +377,8 @@ nav {
     align-items: center;
 }
 
-#kamar-dropdown .kamar-group .kamar-tipe {
+#kamar-dropdown .kamar-group .kamar-tipe,
+#kamar-dropdown-rumah .kamar-group .kamar-tipe{
     width: 80%;
 }
 
@@ -369,7 +388,7 @@ nav {
 
 
 
-#kamar-dropdown span {
+#kamar-dropdown span,#kamar-dropdown-rumah span {
     color: #999;
     font-size: 12px;
     padding-bottom: 20px;
