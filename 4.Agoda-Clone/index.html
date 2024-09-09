@@ -102,10 +102,16 @@
                     <i class="bi bi-search"></i>
                     <input type="text" placeholder="Ketik kota tujuan atau nama properti" >
 
-                    <div class="date">
-                        <input type="date" name="from" id="from">
-                        <input type="date" name="to" id="to">
+                    <div class="date-label">
+                        <input type="checkbox" name="from" id="from">
+                        <i class="bi bi-calendar2-plus"></i>
+                        <label for="from" id="currentDate"></label>
                     </div>
+
+
+                    
+                    
+                    
                     <div class="kamar">
                         <i class="bi bi-person" ></i>
                     
@@ -132,6 +138,35 @@
 
                 </form>
             </div>
+
+
+            <!-- Kalender Hotel -->
+            <div class="container-date" id="kalender">
+                <div class="calendar-assets">
+                    <div class="field">
+                        <form class="form-input" id="date-search" onsubmit="return setDate(this)">
+                            <input type="date" class="text-field" name="date" id="date" required>
+                        </form>
+                    </div>
+                    <div class="day-assets">
+                        <button class="btn" onclick="prevDay()" ><i class="bi bi-arrow-left"></i> </button>
+                        <button class="btn" onclick="resetDate()"><i class="bi bi-calendar"></i> Hari Ini</button>
+                        <button class="btn" onclick="nextDay()" ><i class="bi bi-arrow-right"></i> </button>
+                    </div>
+                </div>
+                <div class="calendar" id="table">
+                    <div class="header-date">
+                        <div class="month" id="month-header">
+        
+                        </div>
+                        <div class="buttons">
+                            <button class="icon" onclick="prevMonth()" ><i class="bi bi-chevron-left"></i></button>
+                            <button class="icon" onclick="nextMonth()" ><i class="bi bi-chevron-right "></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             
             <div class="tambah-penerbangan">
                 <a href=""><i class="bi bi-plus"></i>Tambah Penerbangan</a>
@@ -143,16 +178,26 @@
         </div>
 
             <!-- Rumah & Apart Content -->
-            <div class="card-content" id="rumah&apart" >
+            <div class="card-content" id="rumah&apart" style="height: 300px;">
             <div class="card-form">
                 <form action="">
                     <i class="bi bi-search"></i>
-                    <input type="text" placeholder="Ketik kota tujuan atau nama properti" >
+                    <input type="text" placeholder="Cari rumah" >
 
-                    <div class="date">
-                        <input type="date" name="from" id="from">
-                        <input type="date" name="to" id="to">
+                    <div class="lokasi-label">
+                        <i class="bi bi-geo-alt"></i>
+                        <input type="checkbox" name="lokasi" id="lokasi">
+                        <label for="lokasi">Lokasi</label>
+                        <label for="lokasi" style="font-size: 14px; color: #999;">Indonesia</label>
+
+                        <div class="content-lokasi" id="dropdown-lokasi">
+                            <ul>
+                                <li>Indonesia</li>
+                                <li>Luar Negeri</li>
+                            </ul>
+                        </div>
                     </div>
+
                     <div class="kamar">
                         <i class="bi bi-person" ></i>
                     
@@ -180,9 +225,6 @@
                 </form>
             </div>
             
-            <div class="tambah-penerbangan">
-                <a href=""><i class="bi bi-plus"></i>Tambah Penerbangan</a>
-            </div>
 
             <div class="cari">
                 <button type="submit" class="btn-cari">Cari</button>
@@ -191,7 +233,7 @@
 
 
             <!-- Pesawat & Hotel Content -->
-            <div class="card-content" id="pesawathotel" >
+            <div class="card-content" id="pesawathotel" style="height: 370px;" >
                 <div class="card-tag" id="tag-hotel">
                     <input type="checkbox" name="pulang-pergi" id="pulang-pergi">
                     <label for="pulang-pergi">Pulang pergi</label>
@@ -218,18 +260,23 @@
                     <i class="bi bi-search"></i>
                     <input type="text" placeholder="Ketik kota tujuan atau nama properti" >
 
-                    <div class="date">
-                        <input type="date" name="from" id="from">
-                        <input type="date" name="to" id="to">
+                    <div class="nama-kota">
+                        <i class="bi bi-airplane"></i>
+                        <input type="text" name="darimana" id="darimana" placeholder="Nama kota atau bandara">
+                        <div class="pembatas">
+                            <i class="bi bi-arrow-left-right" ></i>
+                        </div>
+                        <i class="bi bi-geo-alt" style="font-size: 25px; position: absolute; top: 30%; left: 58%;"></i>
+                        <input type="text" name="kemana" id="kemana" placeholder="Lokasi tujuan" style="padding-left: 90px;">
                     </div>
                     <div class="kamar">
                         <i class="bi bi-person" ></i>
                     
-                        <input type="checkbox" name="kamar" id="kamar">
-                        <label for="kamar">Jenis Kamar </label>
-                        <label for="kamar" style="color: #999; font-size: 14px; ;">Rentang Usia </label>
+                        <input type="checkbox" name="kamar" id="kamar-pesawat-hotel">
+                        <label for="kamar-pesawat-hotel">Jenis Kamar </label>
+                        <label for="kamar-pesawat-hotel" style="color: #999; font-size: 14px; ;">Rentang Usia </label>
 
-                        <div id="kamar-dropdown">
+                        <div id="kamar-dropdown-pesawat-hotel">
                           <div class="kamar-group">
                             <div class="kamar-tipe">
                                 <p>Kamar</p>
@@ -249,9 +296,7 @@
                 </form>
             </div>
             
-            <div class="tambah-penerbangan">
-                <a href=""><i class="bi bi-plus"></i>Tambah Penerbangan</a>
-            </div>
+            
 
             <div class="cari">
                 <button type="submit" class="btn-cari">Cari</button>
@@ -259,24 +304,42 @@
         </div>
 
             <!-- Pesawat  Content -->
-            <div class="card-content" id="pesawat" >
+            <div class="card-content" id="pesawat" style="height: 350px;">
+                <div class="card-tag">
+                    <a href="">Pulang pergi</a>
+                    <a href="">Satu arah</a>
+                </div>
             <div class="card-form">
                 <form action="">
-                    <i class="bi bi-search"></i>
-                    <input type="text" placeholder="Ketik kota tujuan atau nama properti" >
-
-                    <div class="date">
-                        <input type="date" name="from" id="from">
-                        <input type="date" name="to" id="to">
+                 
+                    <div class="input-tujuan">
+                        <div class="input-darimana">
+                            <div class="bi bi-airplane"></div>
+                            <input type="text" name="darimana" id="darimana" placeholder="Dari mana?">
+                        </div>
+                        <div class="pembatas">
+                            <i class="bi bi-arrow-left-right" ></i>
+                        </div>
+                        <div class="input-kemana">
+                            <div class="bi bi-geo-alt"></div>
+                            <input type="text" name="kemana" id="kemana" placeholder="Ke mana?" style="padding-left: 85px;">
+                        </div>
                     </div>
+
+                    <div class="tambah-hotel">
+                        <input type="checkbox" name="tambah-hotel" id="tambah-hotel" style="display: block;">
+                        <label for="tambah-hotel">Tambahkan hotel untuk hemat hingga 25%</label>
+                        <span>Paket Hemat</span>
+                    </div>
+
                     <div class="kamar">
                         <i class="bi bi-person" ></i>
                     
-                        <input type="checkbox" name="kamar" id="kamar">
-                        <label for="kamar">Jenis Kamar </label>
-                        <label for="kamar" style="color: #999; font-size: 14px; ;">Rentang Usia </label>
+                        <input type="checkbox" name="kamar" id="kamar-pesawat">
+                        <label for="kamar-pesawat">Jenis Kamar </label>
+                        <label for="kamar-pesawat" style="color: #999; font-size: 14px; ;">Rentang Usia </label>
 
-                        <div id="kamar-dropdown">
+                        <div id="kamar-dropdown-pesawat">
                           <div class="kamar-group">
                             <div class="kamar-tipe">
                                 <p>Kamar</p>
@@ -295,10 +358,8 @@
 
                 </form>
             </div>
+           
             
-            <div class="tambah-penerbangan">
-                <a href=""><i class="bi bi-plus"></i>Tambah Penerbangan</a>
-            </div>
 
             <div class="cari">
                 <button type="submit" class="btn-cari">Cari</button>
@@ -306,46 +367,15 @@
         </div>
 
             <!-- Aktivitas -->
-            <div class="card-content" id="aktivitas" >
+            <div class="card-content" id="aktivitas" style="height: 200px;" >
             <div class="card-form">
                 <form action="">
                     <i class="bi bi-search"></i>
                     <input type="text" placeholder="Ketik kota tujuan atau nama properti" >
-
-                    <div class="date">
-                        <input type="date" name="from" id="from">
-                        <input type="date" name="to" id="to">
-                    </div>
-                    <div class="kamar">
-                        <i class="bi bi-person" ></i>
-                    
-                        <input type="checkbox" name="kamar" id="kamar">
-                        <label for="kamar">Jenis Kamar </label>
-                        <label for="kamar" style="color: #999; font-size: 14px; ;">Rentang Usia </label>
-
-                        <div id="kamar-dropdown">
-                          <div class="kamar-group">
-                            <div class="kamar-tipe">
-                                <p>Kamar</p>
-                            </div>
-                            <div class="kamar-tipe">
-                                <p>Dewasa</p>
-                                <span>Untuk usia 18 tahun ke atas</span>
-                            </div>
-                            <div class="kamar-tipe">
-                                <p>Anak</p>
-                                <span>Untuk umur 0-17tahun</span>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-
                 </form>
             </div>
             
-            <div class="tambah-penerbangan">
-                <a href=""><i class="bi bi-plus"></i>Tambah Penerbangan</a>
-            </div>
+           
 
             <div class="cari">
                 <button type="submit" class="btn-cari">Cari</button>
@@ -353,46 +383,63 @@
         </div>
 
             <!-- Transfer Bandara Content -->
-            <div class="card-content" id="transfer" >
+            <div class="card-content" id="transfer" style="height: 350px;">
+                <div class="card-tag">
+                    <a href="">Dari bandara</a>
+                    <a href="">Ke bandara</a>
+                </div>
             <div class="card-form">
                 <form action="">
-                    <i class="bi bi-search"></i>
-                    <input type="text" placeholder="Ketik kota tujuan atau nama properti" >
-
-                    <div class="date">
-                        <input type="date" name="from" id="from">
-                        <input type="date" name="to" id="to">
+                   
+                    <div class="input-tujuan">
+                        <div class="input-darimana">
+                            <div class="bi bi-airplane"></div>
+                            <input type="text" name="darimana" id="darimana" placeholder="Penjemputan bandara">
+                        </div>
+                        <div class="pembatas">
+                            <i class="bi bi-arrow-left-right" ></i>
+                        </div>
+                        <div class="input-kemana">
+                            <div class="bi bi-geo-alt"></div>
+                            <input type="text" name="kemana" id="kemana" placeholder="Lokasi destinasi" style="padding-left: 85px;">
+                        </div>
                     </div>
+
+                    <div class="tanggal-jemput">
+                        <input type="date" name="tanggal-jemput" id="tanggal-jemput">
+                    <label for="tanggal-jemput" id="label-jemput"></label>
+
+                    <div class="date-display" id="display-date" style="padding-left: 20px;" ></div>
+
+
+                    </div>
+
                     <div class="kamar">
                         <i class="bi bi-person" ></i>
                     
-                        <input type="checkbox" name="kamar" id="kamar">
-                        <label for="kamar">Jenis Kamar </label>
-                        <label for="kamar" style="color: #999; font-size: 14px; ;">Rentang Usia </label>
+                        <input type="checkbox" name="kamar-transfer-bandara" id="kamar-transfer-bandara">
+                        <label for="kamar-transfer-bandara" style="padding-top: 10px; ">
+                            <span id="jumlah-penumpang" style="padding-right: 10px;">1</span>
+                            Penumpang
+                        </label>
+                        
 
-                        <div id="kamar-dropdown">
-                          <div class="kamar-group">
-                            <div class="kamar-tipe">
-                                <p>Kamar</p>
+                       <div id="tambah-penumpang" style="margin-top: 50px;">
+                        <div class="tambah-penumpang-container">
+                            <p>Penumpang</p>
+                            <span>Total penumpang dewasa,anak</span>
+                            <div class="button-action">
+                                <button onclick="kurangiPenumpang()" id="kurangiPenumpang">-</button>
+                                <span id="hitungPenumpang">1</span>
+                                <button  id="tambahPenumpang">+</button>
                             </div>
-                            <div class="kamar-tipe">
-                                <p>Dewasa</p>
-                                <span>Untuk usia 18 tahun ke atas</span>
-                            </div>
-                            <div class="kamar-tipe">
-                                <p>Anak</p>
-                                <span>Untuk umur 0-17tahun</span>
-                            </div>
-                          </div>
                         </div>
+                       </div>
                     </div>
 
                 </form>
             </div>
             
-            <div class="tambah-penerbangan">
-                <a href=""><i class="bi bi-plus"></i>Tambah Penerbangan</a>
-            </div>
 
             <div class="cari">
                 <button type="submit" class="btn-cari">Cari</button>
@@ -1802,6 +1849,7 @@
 
        <!-- Footer -->
         <footer class="footer">
+            
             <div class="footer-col">
                 <div class="footer-bantuan">
                     <div class="footer-bantuan-title">
@@ -1873,6 +1921,11 @@
             </div>
         </footer>
        <!-- Footer End -->
+
+      
+
+      
+
       <script src="js/script.js"></script>
 </body>
 </html>
